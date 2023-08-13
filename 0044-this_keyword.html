@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0044-this_keyword</title>
+  </head>
+  <body>
+    <script>
+      console.log(this);
+
+      const numbers = {
+        one: 11,
+        getNumber: function (num) {
+          console.log(`Parameter: ${num}, Object: ${this.one}`);
+        },
+      };
+
+      numbers.getNumber(99);
+    </script>
+  </body>
+</html>

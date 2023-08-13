@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0040-function_generator</title>
+  </head>
+  <body>
+    <script>
+      function* createData() {
+        yield "one";
+        yield "two";
+        yield "three";
+      }
+
+      const data = createData();
+      for (const i of data) {
+        console.log(i);
+      }
+
+      // NOTE: Lazy
+      function* oddNumber(value) {
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 == 1) {
+            yield i;
+          }
+        }
+      }
+
+      const odd = oddNumber(10);
+      for (const i of odd) {
+        console.log(i);
+      }
+      console.log(odd.next().value);
+      console.log(odd.next().value);
+      console.log(odd.next().value);
+
+      // NOTE: Eager
+      function oddNumberArray(value) {
+        const result = [];
+        for (let i = 10; i <= value; i += 10) {
+          if (i % 2 == 1) {
+            console.log(`Yield ${i}`);
+            result.push(i);
+          }
+        }
+        return result;
+      }
+    </script>
+  </body>
+</html>

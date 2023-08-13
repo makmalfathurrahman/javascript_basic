@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0046-destructuring</title>
+  </head>
+  <body>
+    <script>
+      // NOTE: Destructuring array
+      const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+      const [one, two, three, four, five, ...other] = numbers;
+
+      console.log(one);
+      console.log(two);
+      console.log(three);
+      console.log(four);
+      console.log(five);
+      console.log(other);
+
+      // NOTE: Destructuring object
+      const alphabet = {
+        first: "AAA",
+        second: "BBB",
+        vocal: {
+          a: "AAA",
+          i: "III",
+          u: "UUU",
+          e: "EEE",
+          o: "OOO",
+        },
+        third: "CCC",
+        fourth: "DDD",
+      };
+
+      let {
+        first,
+        second,
+        vocal: { a, i, u, e, o },
+        third,
+        ...others
+      } = alphabet;
+      console.log(first);
+      console.log(second);
+      console.log(a);
+      console.log(i);
+      console.log(u);
+      console.log(e);
+      console.log(o);
+      console.log(third);
+      console.log(others);
+
+      function displayAlphabet({ first, second, third }) {
+        console.log(first);
+        console.log(second);
+        console.log(third);
+      }
+      displayAlphabet(alphabet);
+
+      let {
+        first: firstValue,
+        second: secondValue,
+        third: thirdValue = "3C3C3C",
+        fourth: fourthValue,
+      } = alphabet;
+      console.log(firstValue);
+      console.log(secondValue);
+      console.log(thirdValue);
+      console.log(fourthValue);
+    </script>
+  </body>
+</html>

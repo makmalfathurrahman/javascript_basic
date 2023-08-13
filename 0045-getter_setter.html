@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0045-getter_setter</title>
+  </head>
+  <body>
+    <script>
+      const numbers = {
+        one: "one",
+        two: "two",
+        get getNumbers() {
+          return `${this.one} ${this.two}`;
+        },
+        set getNumbers(value) {
+          const array = value.split(" ");
+          this.one = array[0];
+          this.two = array[1];
+        },
+      };
+      // NOTE: Getter
+      console.table(numbers.getNumbers);
+
+      // NOTE: Setter
+      numbers.getNumbers = "AAA BBB";
+      console.table(numbers);
+    </script>
+  </body>
+</html>

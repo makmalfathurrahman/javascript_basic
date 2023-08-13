@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0029-for_in_loop</title>
+  </head>
+  <body>
+    <script>
+      let numbers = ["one", "two", "three", "four", "five"];
+      for (i in numbers) {
+        console.log(numbers[i]);
+      }
+
+      let alphabet = {
+        1: "A",
+        2: "B",
+        3: "C",
+        4: "D",
+        5: "E",
+      };
+      for (const i in alphabet) {
+        console.table(`${i}: ${alphabet[i]}`);
+      }
+    </script>
+  </body>
+</html>

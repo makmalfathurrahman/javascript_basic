@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0020-in_operator</title>
+  </head>
+  <body>
+    <script>
+      let numbers = {
+        one: 1,
+        two: 2,
+        three: 3,
+        undefinedProperty: undefined,
+        nullProperty: null,
+      };
+
+      const result = "one" in numbers;
+      console.log(`one in numbers: ${result}`);
+
+      const resultUndefined = "undefinedProperty" in numbers;
+      console.log(`undefinedProperty in numbers: ${resultUndefined}`);
+
+      const resultNull = "nullProperty" in numbers;
+      console.log(`nullProperty in numbers: ${resultNull}`);
+    </script>
+  </body>
+</html>

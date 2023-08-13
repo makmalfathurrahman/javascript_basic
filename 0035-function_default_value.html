@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0035-function_default_value</title>
+  </head>
+  <body>
+    <script>
+      function person(address = "Indonesia") {
+        console.log(`I'm from ${address}`);
+      }
+
+      person();
+      person("Jakarta");
+      person(undefined);
+      person(null);
+    </script>
+  </body>
+</html>

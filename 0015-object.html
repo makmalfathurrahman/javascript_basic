@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0015-object</title>
+  </head>
+  <body>
+    <script>
+      let numbers = {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+      };
+      console.table(numbers);
+
+      console.info(`one: ${numbers.one}`);
+      console.info(`four: ${numbers.four}`);
+
+      delete numbers["three"];
+      console.table(numbers);
+    </script>
+  </body>
+</html>

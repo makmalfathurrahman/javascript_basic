@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0010-logic_operator</title>
+  </head>
+  <body>
+    <script>
+      const x = true;
+      const y = false;
+
+      console.log("true && false: " + (x && y));
+
+      console.log("true || false: " + (x || y));
+
+      console.log("!true: " + !x);
+      console.log("!false: " + !y);
+
+      // NOTE: Non boolean logic operator
+      // NOTEADD: Or || operator
+      console.log("hello" || "");
+      console.log("" || []);
+      console.log("0" || "zero");
+      console.log(0 || "0");
+      console.log(null || "null");
+      console.log(undefined || "undefined");
+
+      // NOTEADD: And && operator
+      console.log("hello" && "");
+      console.log("" && []);
+      console.log("0" && "zero");
+      console.log(0 && "0");
+      console.log(null && "null");
+      console.log(undefined && "undefined");
+    </script>
+  </body>
+</html>

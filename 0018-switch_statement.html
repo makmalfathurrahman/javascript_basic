@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0018-switch_statement</title>
+  </head>
+  <body>
+    <script>
+      let fruit = "lemon";
+      let fruitColor;
+
+      switch (fruit) {
+        case "apple":
+          fruitColor = "red or green";
+          break;
+        case "lemon":
+        case "banana":
+          fruitColor = "yellow";
+          break;
+        case "orange":
+          fruitColor = "orange";
+          break;
+        case "grape":
+          fruitColor = "purple or green";
+          break;
+        default:
+          fruitColor = "unknown";
+      }
+
+      console.log(`The color of the ${fruit} is ${fruitColor}.`);
+    </script>
+  </body>
+</html>

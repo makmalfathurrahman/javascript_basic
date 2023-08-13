@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0036-rest_parameter</title>
+  </head>
+  <body>
+    <script>
+      function rest(name, ...data) {
+        let total = 0;
+        for (i of data) {
+          total += i;
+        }
+        console.log(`Total ${name} is ${total}`);
+      }
+
+      rest("number", 3, 5, 6, 1, 4);
+      rest("number", 1, 5, 4, 7, 0);
+
+      const list = [10, 20, 30, 40, 50];
+      rest("total number", ...list);
+    </script>
+  </body>
+</html>

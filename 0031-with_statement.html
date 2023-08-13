@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0031-with_statement</title>
+  </head>
+  <body>
+    <script>
+      // NOTE: With statement is not reccomended for use
+      let numbers = {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+      };
+
+      with (numbers) {
+        console.log(one);
+        console.log(two);
+        console.log(three);
+        console.log(four);
+        console.log(five);
+      }
+    </script>
+  </body>
+</html>
